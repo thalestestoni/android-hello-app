@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HelloApp</string>
+    <string name="button_text_click_counter">Click counter</string>
+    <string name="text_view_click_counter">0</string>
 </resources>

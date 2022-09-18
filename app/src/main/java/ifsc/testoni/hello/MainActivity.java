@@ -4,14 +4,28 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    private int clickCounter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.i("cycleTime", "onCreate");
+        setMyTextViewWithClickCounter();
+    }
+
+    public void addClickToClickCounter(View view) {
+        clickCounter += 1;
+        setMyTextViewWithClickCounter();
+    }
+
+    public void setMyTextViewWithClickCounter() {
+        TextView textView = findViewById(R.id.textView);
+        textView.setText(Integer.toString(clickCounter));
     }
 
     @Override
